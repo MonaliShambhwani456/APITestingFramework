@@ -12,6 +12,7 @@ public class CreateCustomerAPI extends BaseTest {
 	
 	public static Response sendPostReqToCreateCustomerWithValidSecretKey(Hashtable<String,String>data)
 	{
+		//Make some changes
 		Response response = given().auth().basic(property.getProperty("validateCreateCustomerAPIKey"), "")
 				.formParam("email", data.get("email")).formParam("description", data.get("description"))
 				.post(property.getProperty("endPointURI"));
